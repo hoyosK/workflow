@@ -1,0 +1,55 @@
+.wrapper {
+  width: 100%;
+  @include ltr-rtl("padding-left", var(--cui-sidebar-occupy-start, 0));
+  will-change: auto;
+  @include transition(padding .15s);
+}
+.link-primary {
+    color: rgb(129,49,52) !important;
+    cursor: pointer;
+}
+.link-primary:hover, .link-primary:focus {
+    color: rgb(234,170,33) !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+.icon {
+    cursor: pointer;
+    color: var(--cui-primary);
+}
+
+.icon:hover{
+    opacity: 0.8;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.54);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999!important;
+}
+
+.loading .loadingBox{
+    background: white;
+    padding: 3em 3em 2em 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.loading .loadingBox img{
+    width: 40px;
+}
